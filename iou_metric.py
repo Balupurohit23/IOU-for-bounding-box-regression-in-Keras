@@ -1,4 +1,4 @@
-def iou_loss(y_true, y_pred):
+def iou_metric(y_true, y_pred):
     # iou as metric for bounding box regression
     # input must be as [x1, y1, x2, y2]
     
@@ -26,5 +26,4 @@ def iou_loss(y_true, y_pred):
     # bounding values of iou to (0,1)
     iou = K.clip(iou, 0.0 + K.epsilon(), 1.0 - K.epsilon())
 
-    return iou_loss
-    
+    return iou    
